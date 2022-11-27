@@ -5,10 +5,10 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-int SumNaturalNumders(int numM, int numN)
+int SumNaturalNumbers(int numM, int numN)
 {
     if (numM == numN) return numN;
-    return numN + SumNaturalNumders(numM, numN - 1);
+    return numN + SumNaturalNumbers(numM, numN - 1);
 }
 
 Console.WriteLine("Введите два натуральных числа: ");
@@ -25,7 +25,7 @@ if (numberM > 0 && numberN > 0)
         numberM = numberN;
         numberN = temporary;
     }
-    int sumNaturalNumbers = SumNaturalNumders(numberM, numberN);
+    int sumNaturalNumbers = SumNaturalNumbers(numberM, numberN);
     Console.WriteLine($"M = {numberM}; N = {numberN} -> {sumNaturalNumbers}");
 }
 else System.Console.WriteLine("Введено некорректное значение");
